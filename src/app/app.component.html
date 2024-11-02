@@ -1,0 +1,15 @@
+<main id="main" class="main">
+  <div class="content">
+    <mat-toolbar color="primary" class="toolbar">
+      <span> Bookmarker </span>
+      <div><app-search-filter></app-search-filter></div>
+      <span>
+        <button mat-icon-button (click)="addBookmark()">
+          <mat-icon>add</mat-icon>
+        </button>
+      </span>
+    </mat-toolbar>
+
+    <router-outlet />
+  </div>
+</main>

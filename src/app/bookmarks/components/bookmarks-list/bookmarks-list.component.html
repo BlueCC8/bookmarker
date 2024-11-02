@@ -1,0 +1,27 @@
+<div class="bookmarks-container">
+  <h3 *ngIf="!!currentFilter" class="current-filter">
+    Results for: "{{ currentFilter }}"
+  </h3>
+  <div class="section-list" *ngFor="let bookmarkEl of bookmarks">
+    <span class="list-title">{{ bookmarkEl.title }}</span>
+    <mat-card class="list-card" *ngFor="let item of bookmarkEl.list">
+      <mat-card-content class="list-content">
+        <span class="tag-information">
+          <mat-icon>bookmark</mat-icon>
+          <span class="information">
+            <span class="title">{{ item.title }}</span>
+            <span class="description">{{ item.url }}</span>
+          </span>
+        </span>
+        <span class="actions">
+          <button mat-icon-button (click)="editBookmark(item.id)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="deleteBookmark(item.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </span>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

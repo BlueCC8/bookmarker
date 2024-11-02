@@ -1,0 +1,27 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$primary: mat.define-palette(mat.$indigo-palette);
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-form-field-infix {
+  padding-top: 0.6rem;
+}
+
+#main .mat-mdc-text-field-wrapper {
+  background-color: #fff;
+  box-shadow: none;
+}
+app-search-filter .mat-mdc-form-field-flex {
+  max-height: 2.5rem;
+}

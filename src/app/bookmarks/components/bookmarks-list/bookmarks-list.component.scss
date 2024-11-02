@@ -1,0 +1,40 @@
+.bookmarks-container {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-title {
+  margin: 1rem 0rem;
+  font-size: 1rem;
+}
+.section-list {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.list-card {
+  min-width: 50%;
+  margin: 1rem 0rem;
+}
+.list-content {
+  display: flex;
+  justify-content: space-between;
+}
+.tag-information {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.information {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.current-filter {
+  align-self: center;
+  width: 60%;
+}

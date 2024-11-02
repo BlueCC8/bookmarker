@@ -1,0 +1,22 @@
+<div class="container">
+  <mat-form-field class="search-filter" color="primary" appearance="fill">
+    <mat-icon matPrefix color="primary">search</mat-icon>
+    <input
+      type="text"
+      placeholder="{{ placeholder }}"
+      aria-label="search"
+      matInput
+      [formControl]="myControl"
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete #auto="matAutocomplete" class="custom-autocomplete-panel">
+      <mat-option
+        *ngFor="let option of filteredOptions | async"
+        [value]="option"
+        class="custom-autocomplete-option"
+      >
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>

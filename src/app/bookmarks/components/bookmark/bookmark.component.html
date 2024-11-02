@@ -1,0 +1,36 @@
+<mat-card class="bookmark-card">
+  <mat-card-content class="bookmark-content">
+    <div class="bookmark-info">
+      <div class="label-container">
+        <span class="label">
+          {{ editMode ? 'Update bookmark' : 'Create bookmark' }}</span
+        >
+        <mat-icon>bookmark</mat-icon>
+      </div>
+      <div class="bookmark-details">
+        <mat-form-field class="bookmark-form-field title">
+          <input
+            matInput
+            placeholder="Title"
+            [(ngModel)]="bookmark.title"
+            name="title"
+          />
+        </mat-form-field>
+        <mat-form-field class="bookmark-form-field url">
+          <input
+            matInput
+            placeholder="URL"
+            [(ngModel)]="bookmark.url"
+            name="url"
+          />
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="separator"></div>
+    <div class="actions">
+      <button mat-flat-button color="primary" (click)="saveBookmark()">
+        Save
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>
